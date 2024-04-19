@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TailWindCSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="TailwindCSS.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body class="bg-zinc-100">
+    <nav class="fixed z-20 top-0 w-full flex items-center justify-between px-5 py-2 bg-slate-800 border-b-2 border-slate-400">
+        <div class="flex gap-36">
+            <div class="flex gap-8">
+                <a href="TailwindCSS.html" class="text-white text-3xl font-semibold sm:text-4xl ">Blox</a>
+            <div class="flex items-center text-white cursor-pointer select-none" id="hamburger">
+                <span class="material-symbols-outlined">
+                    menu
+                </span>
+            </div>
+            </div>
+            <div class="search-container hidden items-center pl-1 w-91/4 h-10 border-2 border-gray-500 rounded-xl lg:flex">
+                <input id="searchInput" class="bg-transparent text-white px-2 placeholder-gray-500 focus:outline-none" type="text" placeholder="Search...">
+                <select class="h-10 w-28 bg-transparent text-white border-l-2 border-gray-500 select-none" name="" id="">
+                    <option class="text-black" value="">All</option>
+                    <option class="text-black" value="">Beauty</option>
+                    <option class="text-black" value="">apple</option>
+                </select>
+                <button class="text-white bg-orange-500 px-4 py-1 h-10 rounded-tr-xl rounded-br-xl hover:bg-orange-600 transition-colors duration-300 ease-in-out focus:outline-none select-none">Search</button>
+            </div>            
+        </div>
+        <div class="flex items-center gap-7 cursor-pointer select-none relative">
+            <a class="hidden items-center sm:flex" href="Favorite.html">
+                <span class="material-symbols-outlined text-white hover:text-gray-300 transition-colors duration-150">
+                    favorite
+                </span>
+            </a>
+            <a class="hidden relative sm:flex" href="AddToCart.html">
+                <span class="material-symbols-outlined text-white bg-orange-500 p-1 rounded hover:bg-orange-600 transition-colors duration-150">
+                    shopping_cart
+                </span>
+                <p class="absolute -top-1 -right-1 bg-white text-xs rounded-full w-3 h-3 flex items-center justify-center">3</p>
+            </a>
+            <span class="material-symbols-outlined hidden text-white sm:flex hover:text-gray-300 transition-colors duration-150" onclick="notiPopUp()">
+                notifications
+            </span>
+
+            <div class="absolute hidden flex-col top-12 right-0 bg-white shadow-md shadow-gray-300 w-64 sm:w-80 p-2 rounded" id="noti">
+                <h3 class="text-lg font-semibold mb-2">Notifications</h3>
+                <i class="fa-solid fa-xmark absolute top-2 right-2 flex sm:hidden" onclick="closeNotiPopUp()"></i>
+                <div class="notification-item flex flex-col items-start mb-2 overflow-y-auto h-52">
+                    <div class="flex w-full p-1 border-b-2 border-gray-100">
+                        <div class="rounded-full bg-green-500 text-white w-8 h-7 flex items-center justify-center mr-2">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="w-full">
+                            <div>
+                                <p class="text-sm">You have a new order!</p>
+                                <a href="#" class="text-blue-500 text-sm">View details</a>
+                            </div>
+                            <div class="flex justify-between w-full">
+                                <p class="text-xs text-gray-400">2 days ago</p>
+                                <p class="text-xs underline text-orange-400 hover:no-underline">mark as read</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex w-full p-1 border-b-2 border-gray-100">
+                        <div class="rounded-full bg-green-500 text-white w-8 h-7 flex items-center justify-center mr-2">
+                            <i class="fas fa-bell text-white"></i>
+                        </div>
+                        <div class="w-full">
+                            <div>
+                                <p class="text-sm">New Arrival: Beats Headphones</p>
+                                <a href="#" class="text-blue-500 text-sm">View details</a>
+                            </div>
+                            <div class="flex justify-between w-full">
+                                <p class="text-xs text-gray-400">1 day ago</p>
+                                <p class="text-xs underline text-orange-400 hover:no-underline">mark as read</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex w-full p-1 border-b-2 border-gray-100">
+                        <div class="rounded-full bg-green-500 text-white w-8 h-7 flex items-center justify-center mr-2">
+                            <i class="fas fa-check text-white"></i>
+                        </div>
+                        <div class="w-full">
+                            <div>
+                                <p class="text-sm">Your order has been shipped!</p>
+                                <a href="#" class="text-blue-500 text-sm">View details</a>
+                            </div>
+                            <div class="flex justify-between w-full">
+                                <p class="text-xs text-gray-400">16h ago</p>
+                                <p class="text-xs underline text-orange-400 hover:no-underline">mark as read</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex w-full p-1 border-b-2 border-gray-100">
+                        <div class="rounded-full bg-green-500 text-white w-8 h-7 flex items-center justify-center mr-2">
+                            <i class="fas fa-exclamation-circle text-white"></i>
+                        </div>
+                        <div class="w-full">
+                            <div>
+                                <p class="text-sm">Warning: Low stock for iPhone 13</p>
+                                <a href="#" class="text-blue-500 text-sm">View details</a>
+                            </div>
+                            <div class="flex justify-between w-full">
+                                <p class="text-xs text-gray-400">1h ago</p>
+                                <p class="text-xs underline text-orange-400 hover:no-underline">mark as read</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="absolute hidden flex-col top-12 right-0 bg-white shadow-md shadow-gray-300 w-60 p-2 rounded" id="noti">
+                <div class="flex items-center gap-3 pb-2 border-b-2">
+                    <div class="profile-img w-12">
+                        <img class="w-full h-full object-contain rounded-full" src="Image/ts.jfif" alt="Image">
+                    </div>
+                    <div class="profile-info">
+                        <h1 class="text-sm">Brandon</h1>
+                        <p class="text-xs">brandnn@gmail.com</p>
+                    </div>
+                </div>
+                <div class="border-b-2 p-2">
+                    <a class="flex items-center gap-2 text-gray-600 p-1 hover:bg-gray-100 duration-150" href="#">
+                        <span class="material-symbols-outlined">
+                            account_circle
+                        </span>
+                        Your profile
+                    </a>
+                    <a class="flex items-center gap-2 text-gray-600 p-1 hover:bg-gray-100 duration-150" href="#">
+                        <span class="material-symbols-outlined">
+                            person_add
+                        </span>
+                        Add account
+                    </a> 
+                </div>
+                <a class="flex items-center gap-2 text-gray-600 p-2 hover:bg-gray-100 duration-150" href="#">
+                    <span class="material-symbols-outlined">
+                        settings
+                    </span>
+                    Setting
+                </a>
+            </div>
+            <div class="profile-img w-12 flex items-center gap-1 bg-orange-400 rounded-full p-0.5 mr-3">
+                <img class="w-full h-full object-contain rounded-full" src="Image/ts.jfif" alt="Image">
+                <span class="material-symbols-outlined text-white hover:text-gray-300 transition-colors duration-150" onclick="profilePopUp()">
+                    expand_more
+                </span>
+            </div>
+
+            <div class="absolute hidden flex-col top-12 right-0 bg-white shadow-md shadow-gray-300 w-60 p-2 rounded" id="profile-edit">
+                <div class="flex items-center gap-3 pb-2 border-b-2">
+                    <div class="profile-img w-12">
+                        <img class="w-full h-full object-contain rounded-full" src="Image/ts.jfif" alt="Image">
+                    </div>
+                    <div class="profile-info">
+                        <h1 class="text-sm">Brandon</h1>
+                        <p class="text-xs">brandnn@gmail.com</p>
+                    </div>
+                </div>
+                <div class="border-b-2 p-2">
+                    <a class="flex items-center gap-2 text-gray-600 p-1 hover:bg-gray-100 duration-150" href="#">
+                        <span class="material-symbols-outlined">
+                            account_circle
+                        </span>
+                        Your profile
+                    </a>
+                    <a class="flex items-center gap-2 text-gray-600 p-1 hover:bg-gray-100 duration-150" href="#">
+                        <span class="material-symbols-outlined">
+                            person_add
+                        </span>
+                        Add account
+                    </a> 
+                </div>
+                <a class="flex items-center gap-2 text-gray-600 p-2 hover:bg-gray-100 duration-150" href="#">
+                    <span class="material-symbols-outlined">
+                        settings
+                    </span>
+                    Setting
+                </a>
+            </div>
+
+            <div class="flex sm:hidden">
+                <span class="material-symbols-outlined text-white" onclick="morePopUp()">
+                    more_vert
+                </span>
+
+                <div class="absolute hidden flex-col top-14 right-0 bg-slate-800 w-48 p-2 rounded" id="more">
+                    <a href="Favorite.html" class="flex items-center gap-5 border-b-2 border-slate-700 p-2" href="Favorite.html">
+                        <span class="material-symbols-outlined text-white hover:text-gray-300 transition-colors duration-150">
+                            favorite
+                        </span>
+                        <p class="text-white">Your Favorite</p>
+                    </a>
+                    <a href="AddToCart.html" class="border-b-2 border-slate-700 p-2">
+                        <div class="flex items-center gap-3">
+                            <div class="relative">
+                                <span class="material-symbols-outlined text-white bg-orange-500 p-1 rounded hover:bg-orange-600 transition-colors duration-150">
+                                    shopping_cart
+                                </span>
+                                <p class="absolute -top-1 -right-1 bg-white text-xs rounded-full w-3 h-3 flex items-center justify-center">3</p>
+                            </div>
+                            <p class="text-white">Shopping Cart</p>
+                        </div>
+                    </a>
+                   <div class="flex gap-5 p-2" onclick="notiPopUp()">
+                        <span class="material-symbols-outlined text-white hover:text-gray-300 transition-colors duration-150">
+                            notifications
+                        </span>
+                        <p class="text-white">Notifications</p>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="main-container">
+        <div class="sidebar bg-slate-800 w-64 h-full fixed top-4 -left-full z-10 transition-all duration-500 shadow-2xl shadow-gray-700" id="sidebar">
+            <ul class="pt-14">
+                <li class="text-white p-2 mx-12 mt-1 hover:bg-slate-700 hover:text-orange-400 transition-all duration-100 rounded-lg">
+                    <a class="flex gap-2" href="#">
+                        <span class="material-symbols-outlined">
+                        category
+                        </span>
+                        <p>Categories</p>
+                    </a>
+                </li>
+                <li class="text-white p-2 mx-12 mt-1 hover:bg-slate-700 cursor-pointer hover:text-orange-400 transition-all duration-100 rounded-lg"><a href="#">Echo and Alexa</a></li>
+                <li class="text-white p-2 mx-12 mt-1 hover:bg-slate-700 cursor-pointer hover:text-orange-400 transition-all duration-100 rounded-lg"><a href="#">Kindle</a></li>
+                <li class="text-white p-2 mx-12 mt-1 hover:bg-slate-700 cursor-pointer hover:text-orange-400 transition-all duration-100 rounded-lg"><a href="#">Books</a></li>
+                <li class="text-white p-2 mx-12 mt-1 hover:bg-slate-700 cursor-pointer hover:text-orange-400 transition-all duration-100 rounded-lg"><a href="#">Electronics</a></li>
+                <li class="text-white p-2 mx-12 mt-1 hover:bg-slate-700 cursor-pointer hover:text-orange-400 transition-all duration-100 rounded-lg"><a href="#">Home and Beauty</a></li>
+                <li class="text-white p-2 mx-12 mt-1 hover:bg-slate-700 cursor-pointer hover:text-orange-400 transition-all duration-100 rounded-lg"><a href="#">Automotive</a></li>
+                <li class="text-white p-2 mx-12 mt-1 hover:bg-slate-700 cursor-pointer hover:text-orange-400 transition-all duration-100 rounded-lg"><a href="#">Games</a></li>
+                <li class="text-white p-2 mx-12 mt-1 hover:bg-slate-700 cursor-pointer hover:text-orange-400 transition-all duration-100 rounded-lg"><a href="#">Flim and Music</a></li>
+                <li class="text-white p-2 mx-12 mt-1 hover:bg-slate-700 cursor-pointer hover:text-orange-400 transition-all duration-100 rounded-lg"><a href="#">Animals</a></li>
+                <li class="text-white p-2 mx-12 mt-1 hover:bg-slate-700 cursor-pointer hover:text-orange-400 transition-all duration-100 rounded-lg"><a href="#">Hobby</a></li>
+                <li class="text-white p-2 mx-12 mt-1 hover:bg-slate-700 cursor-pointer hover:text-orange-400 transition-all duration-100 rounded-lg"><a href="#">Gift Cards</a></li>
+                <li class="absolute bottom-7 text-white p-2 mx-12 mt-1 hover:bg-slate-700 hover:text-orange-400 transition-all duration-100 rounded-lg">
+                    <a href="#"><i class="fa-solid fa-right-from-bracket"></i>
+                        Log Out</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <section class="intro-container flex justify-between mt-5 mb-10 p-5 rounded-2xl relative">
+                <div class="custom-shape-divider-top-1713040369 inline-block">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+                    </svg>
+                </div>
+                <div class="intro-text flex flex-col gap-5 mt-10 absolute top-10 lg:gap-0">
+                    <h1 class="font-bold text-orange-700 text-3xl ml-0 sm:text-4xl lg:text-white lg:text-center lg:ml-10 lg:w-1/2">We ship over 45 million products around the world</h1>
+                    <button class="text-orange-400 font-bold w-40 h-10 bg-orange-50 p-1 rounded-3xl" onclick="focusSearchInput()">Browse Products</button>
+                </div>
+            </section>
+        
+            <section class="popular-catelog mt-56 p-6">
+                <div class="popular-catelog-title font-bold text-gray-600 mb-6 text-2xl sm:text-3xl">
+                    <h1>Popular categories</h1>
+                </div>
+                <div class="flex items-center mb-5">
+                    <span class="material-symbols-outlined text-3xl bg-gray-200 rounded-full w-9 h-9 p-1 flex items-center justify-center select-none cursor-pointer hover:bg-gray-300 transition-colors duration-150 sm:w-10 sm:h-10" id="goBackBtn">
+                        chevron_left
+                    </span>
+                    <div class="popular-catelog-items flex gap-5 overflow-auto py-2 mx-3 cursor-pointer select-none scroll-smooth sm:mx-8">
+                        <span class="material-symbols-outlined text-3xl bg-neutral-50 p-5 rounded-lg">
+                            computer
+                        </span>
+                        <span class="material-symbols-outlined text-3xl bg-neutral-50 p-5 rounded-lg">
+                            featured_seasonal_and_gifts
+                        </span>
+                        <span class="material-symbols-outlined text-3xl bg-neutral-50 p-5 rounded-lg">
+                            phone_iphone
+                        </span>
+                        <span class="material-symbols-outlined text-3xl bg-neutral-50 p-5 rounded-lg">
+                            headphones
+                        </span>
+                        <span class="material-symbols-outlined text-3xl bg-neutral-50 p-5 rounded-lg">
+                            photo_camera
+                        </span>
+                        <span class="material-symbols-outlined text-3xl bg-neutral-50 p-5 rounded-lg">
+                            import_contacts
+                        </span>
+                        <span class="material-symbols-outlined text-3xl bg-neutral-50 p-5 rounded-lg">
+                            stadia_controller
+                        </span>
+                        <span class="material-symbols-outlined text-3xl bg-neutral-50 p-5 rounded-lg">
+                            speaker
+                        </span>
+                        <span class="material-symbols-outlined text-3xl bg-neutral-50 p-5 rounded-lg">
+                            camping
+                        </span>
+                        <span class="material-symbols-outlined text-3xl bg-neutral-50 p-5 rounded-lg">
+                            watch_screentime
+                        </span>
+                        <span class="material-symbols-outlined text-3xl bg-neutral-50 p-5 rounded-lg">
+                            pedal_bike
+                        </span>
+                        <span class="material-symbols-outlined text-3xl bg-neutral-50 p-5 rounded-lg">
+                            health_and_beauty
+                        </span>
+                        <span class="material-symbols-outlined text-3xl bg-neutral-50 p-5 rounded-lg">
+                            apparel
+                        </span>
+                        <span class="material-symbols-outlined text-3xl bg-neutral-50 p-5 rounded-lg">
+                            chair
+                        </span>
+                        <span class="material-symbols-outlined text-3xl bg-neutral-50 p-5 rounded-lg">
+                            light_group
+                        </span>
+                        <span class="material-symbols-outlined text-3xl bg-neutral-50 p-5 rounded-lg">
+                            sports_cricket
+                        </span>
+                        <span class="material-symbols-outlined text-3xl bg-neutral-50 p-5 rounded-lg">
+                            music_note
+                        </span>
+                    </div>
+                    <span class="material-symbols-outlined text-3xl bg-gray-200 rounded-full w-9 h-9 p-1 flex items-center justify-center select-none cursor-pointer hover:bg-gray-300 transition-colors duration-150 sm:w-10 sm:h-10" id="goForwardBtn">
+                        chevron_right
+                    </span>
+                </div>
+        
+                <div class="hot-deal-container">
+                    <div class="hot-deal-title font-bold text-gray-600 text-2xl sm:text-3xl">
+                        <h1>Hot deals</h1>
+                    </div>
+                    <div class="hot-deal-btn flex gap-1 justify-end">
+                        <span class="material-symbols-outlined text-3xl bg-gray-200 rounded-full w-9 h-9 p-1 flex items-center justify-center select-none cursor-pointer hover:bg-gray-300 transition-colors duration-150 sm:w-10 sm:h-10" id="goBackBtnn">
+                            chevron_left
+                        </span>
+                        <span class="material-symbols-outlined text-3xl bg-gray-200 rounded-full w-9 h-9 p-1 flex items-center justify-center select-none cursor-pointer hover:bg-gray-300 transition-colors duration-150 sm:w-10 sm:h-10" id="goForwardBtnn">
+                            chevron_right
+                        </span>
+                    </div>
+                    <div class="hot-deal-wrapper flex overflow-auto scroll-smooth">
+                        <div class="hot-deal-box w-96 m-4 relative sm:w-60 sm:m-2">
+                            <span class="material-symbols-outlined absolute top-1 right-1 text-gray-400 select-none cursor-pointer" onclick="toggleFavorite(this)">
+                                favorite
+                            </span>
+                            <div class="hot-deal-img-container flex justify-center bg-white rounded-xl select-none">
+                                <a href="Detail.html" class="img w-32 h-52">
+                                    <img class="w-full h-full object-contain " src="Image/nin.jpg" alt="Image">
+                                </a>
+                            </div>
+                            <a href="Detail.html" class="hot-deal-info">
+                                <h1 class="font-bold">Nintendo Switch(2019)</h1>
+                                <p class="text-sky-700 font-bold text-sm">Nintendo</p>
+                            </a>
+                            <div class="flex items-center gap-1 w-60">
+                                <div class="stars select-none">
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                </div>
+                                <p class="text-xs text-yellow-500 font-bold">4,8</p>
+                                <p class="text-xs font-bold">(21,032 reviews)</p>
+                            </div>
+                            <p class="font-bold text-xl">$290.00 <s class="text-xs font-thin text-gray-400">$320.00</s></p>
+                        </div>
+        
+                        <div class="hot-deal-box w-96 m-4 relative sm:w-60 sm:m-2">
+                            <span class="material-symbols-outlined absolute top-1 right-1 text-gray-400 select-none cursor-pointer" onclick="toggleFavorite(this)">
+                                favorite
+                            </span>
+                            <div class="hot-deal-img-container flex justify-center bg-white rounded-xl select-none">
+                                <a href="Detail.html" class="img w-32 h-52">
+                                    <img class="w-full h-full object-contain " src="Image/beat.jfif" alt="Image">
+                                </a>
+                            </div>
+                            <a href="Detail.html" class="hot-deal-info">
+                                <h1 class="font-bold">Beats headphones</h1>
+                                <p class="text-sky-700 font-bold text-sm">Beats</p>
+                            </a>
+                            <div class="flex items-center gap-1 w-60">
+                                <div class="stars select-none">
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                </div>
+                                <p class="text-xs text-yellow-500 font-bold">4,8</p>
+                                <p class="text-xs font-bold">(21,032 reviews)</p>
+                            </div>
+                            <p class="font-bold text-xl">$290.00 <s class="text-xs font-thin text-gray-400">$320.00</s></p>
+                        </div>
+        
+                        <div class="hot-deal-box w-96 m-4 relative sm:w-60 sm:m-2">
+                            <span class="material-symbols-outlined absolute top-1 right-1 text-gray-400 select-none cursor-pointer" onclick="toggleFavorite(this)">
+                                favorite
+                            </span>
+                            <div class="hot-deal-img-container flex justify-center bg-white rounded-xl select-none">
+                                <a href="Detail.html" class="img w-32 h-52">
+                                    <img class="w-full h-full object-contain " src="Image/mac.jpg" alt="Image">
+                                </a>
+                            </div>
+                            <a href="Detail.html" class="hot-deal-info">
+                                <h1 class="font-bold">Apple MacBook Pro 13,3</h1>
+                                <p class="text-sky-700 font-bold text-sm">Apple</p>
+                            </a>
+                            <div class="flex items-center gap-1 w-60">
+                                <div class="stars select-none">
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                </div>
+                                <p class="text-xs text-yellow-500 font-bold">4,7</p>
+                                <p class="text-xs font-bold">(34,168 reviews)</p>
+                            </div>
+                            <p class="font-bold text-xl">$1149.00 <s class="text-xs font-thin text-gray-400">$320.00</s></p>
+                        </div>
+        
+                        <div class="hot-deal-box w-96 m-4 relative sm:w-60 sm:m-2">
+                            <span class="material-symbols-outlined absolute top-1 right-1 text-gray-400 select-none cursor-pointer" onclick="toggleFavorite(this)">
+                                favorite
+                            </span>
+                            <div class="hot-deal-img-container flex justify-center bg-white rounded-xl select-none">
+                                <a href="Detail.html" class="img w-32 h-52">
+                                    <img class="w-full h-full object-contain " src="Image/camera.jfif" alt="Image">
+                                </a>
+                            </div>
+                            <a href="Detail.html" class="hot-deal-info">
+                                <h1 class="font-bold">Nikon Z fc</h1>
+                                <p class="text-sky-700 font-bold text-sm">Nikon</p>
+                            </a>
+                            <div class="flex items-center gap-1 w-60">
+                                <div class="stars select-none">
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                </div>
+                                <p class="text-xs text-yellow-500 font-bold">4,6</p>
+                                <p class="text-xs font-bold">(21,032 reviews)</p>
+                            </div>
+                            <p class="font-bold text-xl">$1,096.00 <s class="text-xs font-thin text-gray-400">$1,196.00</s></p>
+                        </div>
+        
+                        <div class="hot-deal-box w-96 m-4 relative sm:w-60 sm:m-2">
+                            <span class="material-symbols-outlined absolute top-1 right-1 text-gray-400 select-none cursor-pointer" onclick="toggleFavorite(this)">
+                                favorite
+                            </span>
+                            <a href="Detail.html" class="hot-deal-img-container flex justify-center bg-white rounded-xl select-none">
+                                <div class="img w-32 h-52">
+                                    <img class="w-full h-full object-contain " src="Image/pool.jpg" alt="Image">
+                                </div>
+                            </a>
+                            <a href="Detail.html" class="hot-deal-info">
+                                <h1 class="font-bold">Crystal Blue Kids Outdoor Swimming Pool</h1>
+                                <p class="text-sky-700 font-bold text-sm">Intex</p>
+                            </a>
+                            <div class="flex items-center gap-1 w-60">
+                                <div class="stars select-none">
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                </div>
+                                <p class="text-xs text-yellow-500 font-bold">4,3</p>
+                                <p class="text-xs font-bold">(21,032 reviews)</p>
+                            </div>
+                            <p class="font-bold text-xl">$12.99 <s class="text-xs font-thin text-gray-400">$13.99</s></p>
+                        </div>
+        
+                        <div class="hot-deal-box w-96 m-4 relative sm:w-60 sm:m-2">
+                            <span class="material-symbols-outlined absolute top-1 right-1 text-gray-400 select-none cursor-pointer" onclick="toggleFavorite(this)">
+                                favorite
+                            </span>
+                            <a href="Detail.html" class="hot-deal-img-container flex justify-center bg-white rounded-xl select-none">
+                                <div class="img w-32 h-52">
+                                    <img class="w-full h-full object-contain " src="Image/iphone13.jfif" alt="Image">
+                                </div>
+                            </a>
+                            <a href="Detail.html" class="hot-deal-info">
+                                <h1 class="font-bold">Apple Iphone 13 (pink)</h1>
+                                <p class="text-sky-700 font-bold text-sm">Apple</p>
+                            </a>
+                            <div class="flex items-center gap-1 w-60">
+                                <div class="stars select-none">
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                </div>
+                                <p class="text-xs text-yellow-500 font-bold">4,5</p>
+                                <p class="text-xs font-bold">(21,032 reviews)</p>
+                            </div>
+                            <p class="font-bold text-xl">$749.00 <s class="text-xs font-thin text-gray-400">$829.00</s></p>
+                        </div>
+        
+                        <div class="hot-deal-box w-96 m-4 relative sm:w-60 sm:m-2">
+                            <span class="material-symbols-outlined absolute top-1 right-1 text-gray-400 select-none cursor-pointer" onclick="toggleFavorite(this)">
+                                favorite
+                            </span>
+                            <a href="Detail.html" class="hot-deal-img-container flex justify-center bg-white rounded-xl select-none">
+                                <div class="img w-32 h-52">
+                                    <img class="w-full h-full object-contain " src="Image/alien.webp" alt="Image">
+                                </div>
+                            </a>
+                            <a href="Detail.html" class="hot-deal-info">
+                                <h1 class="font-bold">Beats headphones</h1>
+                                <p class="text-sky-700 font-bold text-sm">Beats</p>
+                            </a>
+                            <div class="flex items-center gap-1 w-60">
+                                <div class="stars select-none">
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                </div>
+                                <p class="text-xs text-yellow-500 font-bold">4,8</p>
+                                <p class="text-xs font-bold">(21,032 reviews)</p>
+                            </div>
+                            <p class="font-bold text-xl">$290.00 <s class="text-xs font-thin text-gray-400">$320.00</s></p>
+                        </div>
+        
+                        <div class="hot-deal-box w-96 m-4 relative sm:w-60 sm:m-2">
+                            <span class="material-symbols-outlined absolute top-1 right-1 text-gray-400 select-none cursor-pointer" onclick="toggleFavorite(this)">
+                                favorite
+                            </span>
+                            <a href="Detail.html" class="hot-deal-img-container flex justify-center bg-white rounded-xl select-none">
+                                <div class="img w-32 h-52">
+                                    <img class="w-full h-full object-contain " src="Image/keyboard.jpg" alt="Image">
+                                </div>
+                            </a>
+                            <a href="Detail.html" class="hot-deal-info">
+                                <h1 class="font-bold">Beats headphones</h1>
+                                <p class="text-sky-700 font-bold text-sm">Beats</p>
+                            </a>
+                            <div class="flex items-center gap-1 w-60">
+                                <div class="stars select-none">
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                </div>
+                                <p class="text-xs text-yellow-500 font-bold">4,8</p>
+                                <p class="text-xs font-bold">(21,032 reviews)</p>
+                            </div>
+                            <p class="font-bold text-xl">$290.00 <s class="text-xs font-thin text-gray-400">$320.00</s></p>
+                        </div>
+        
+                        <div class="hot-deal-box w-96 m-4 relative sm:w-60 sm:m-2">
+                            <span class="material-symbols-outlined absolute top-1 right-1 text-gray-400 select-none cursor-pointer" onclick="toggleFavorite(this)">
+                                favorite
+                            </span>
+                            <a href="Detail.html" class="hot-deal-img-container flex justify-center bg-white rounded-xl select-none">
+                                <div class="img w-32 h-52">
+                                    <img class="w-full h-full object-contain " src="Image/camping bag.jfif" alt="Image">
+                                </div>
+                            </a>
+                            <a href="Detail.html" class="hot-deal-info">
+                                <h1 class="font-bold">Beats headphones</h1>
+                                <p class="text-sky-700 font-bold text-sm">Beats</p>
+                            </a>
+                            <div class="flex items-center gap-1 w-60">
+                                <div class="stars select-none">
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                </div>
+                                <p class="text-xs text-yellow-500 font-bold">4,8</p>
+                                <p class="text-xs font-bold">(21,032 reviews)</p>
+                            </div>
+                            <p class="font-bold text-xl">$290.00 <s class="text-xs font-thin text-gray-400">$320.00</s></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <section class="advertize-container flex flex-col gap-3 m-5 sm:m-10 xl:flex-row">
+                <div class="advertize-box1 bg-slate-200 rounded-lg p-5 flex flex-col items-center justify-evenly flex-grow sm:flex-row lg:h-80">
+                    <div class="advertize-box1-text py-5 flex flex-col justify-evenly">
+                        <div class="text-xl font-bold text-center flex items-center justify-center gap-2">
+                            <div class="logo w-4 select-none">
+                                <img class="w-full h-full object-contain" src="Image/apple-logo.png" alt="Image">
+                            </div>
+                            <p>Watch</p>
+                        </div>
+                        <div class="sm:w-full">
+                            <h1 class="font-bold text-2xl w-full mb-5 sm:w-96 sm:text-4xl">Heavy on feactures Light on price</h1>
+                            <p class="text-xl font-bold text-center mb-5">From $319.08</p>
+                            <div class="advertize-box1-btn flex flex-col items-center gap-10 sm:flex-row">
+                                <button class="text-white bg-orange-500 w-36 h-10 rounded-lg select-none">Buy</button>
+                                <a class="text-orange-500 font-bold flex items-center select-none" href="#">
+                                    <p>Learn more</p>
+                                    <span class="material-symbols-outlined">
+                                    navigate_next
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="advertize-box1-img w-full select-none sm:w-72">
+                        <img class="w-full h-full object-contain" src="Image/apple-watch-series-8_q88h.png" alt="Image">
+                    </div>
+                </div>
+                <div class="advertize-box2 flex flex-col w-full items-center bg-slate-200 rounded-lg px-10 xl:max-w-lg">
+                    <div class="advertize-box2-text pl-0 w-full sm:pl-5">
+                        <h1 class="font-bold text-2xl my-4">Discover all the accessories</h1>
+                        <a class="text-orange-500 font-bold flex items-center select-none" href="#">
+                            <p>Learn more</p>
+                            <span class="material-symbols-outlined">
+                            navigate_next
+                            </span>
+                        </a>
+                    </div>
+                    <div class="w-full sm:w-96">
+                        <img class="w-full h-full object-contain mt-2 rounded-lg select-none" src="Image/Apple_iphone_11-water-resistant-091019_big.jpg.large_.png" alt="Image">
+                    </div>
+                </div>
+            </section>
+        
+            <section class="popular-catelog p-6">
+                <div class="hot-deal-container">
+                    <div class="hot-deal-title font-bold text-gray-600 text-2xl sm:text-3xl">
+                        <h1>Inspried by your shopping trends</h1>
+                    </div>
+                    <div class="hot-deal-btn flex gap-1 justify-end">
+                        <span class="material-symbols-outlined text-3xl bg-gray-200 rounded-full w-9 h-9 p-1 flex items-center justify-center select-none cursor-pointer hover:bg-gray-300 transition-colors duration-150 sm:w-10 sm:h-10" id="goBackBtnn">
+                            chevron_left
+                        </span>
+                        <span class="material-symbols-outlined text-3xl bg-gray-200 rounded-full w-9 h-9 p-1 flex items-center justify-center select-none cursor-pointer hover:bg-gray-300 transition-colors duration-150 sm:w-10 sm:h-10" id="goForwardBtnn">
+                            chevron_right
+                        </span>
+                    </div>
+                    <div class="hot-deal-wrapper flex overflow-auto">
+                        <div class="hot-deal-box w-96 m-4 relative sm:w-60 sm:m-2">
+                            <span class="material-symbols-outlined absolute top-1 right-1 text-gray-400 select-none cursor-pointer" onclick="toggleFavorite(this)">
+                                favorite
+                            </span>
+                            <a href="Detail.html" class="hot-deal-img-container flex justify-center bg-white rounded-xl select-none">
+                                <div class="img w-32 h-52">
+                                    <img class="w-full h-full object-contain " src="Image/bag.jpg" alt="Image">
+                                </div>
+                            </a>
+                            <a href="Detail.html" class="hot-deal-info">
+                                <h1 class="font-bold">Women's Rachel Tote Purse Handbag</h1>
+                                <p class="text-sky-700 font-bold text-sm">Estalon</p>
+                            </a>
+                            <div class="flex items-center gap-1 w-60">
+                                <div class="stars select-none">
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                </div>
+                                <p class="text-xs text-yellow-500 font-bold">4,6</p>
+                                <p class="text-xs font-bold">(20,032 reviews)</p>
+                            </div>
+                            <p class="font-bold text-xl">$168.68 <s class="text-xs font-thin text-gray-400">$180.00</s></p>
+                        </div>
+        
+                        <div class="hot-deal-box w-96 m-4 relative sm:w-60 sm:m-2">
+                            <span class="material-symbols-outlined absolute top-1 right-1 text-gray-400 select-none cursor-pointer" onclick="toggleFavorite(this)">
+                                favorite
+                            </span>
+                            <a href="Detail.html" class="hot-deal-img-container flex justify-center bg-white rounded-xl select-none">
+                                <div class="img w-32 h-52">
+                                    <img class="w-full h-full object-contain " src="Image/vans.jpg" alt="Image">
+                                </div>
+                            </a>
+                            <a href="Detail.html"s class="hot-deal-info">
+                                <h1 class="font-bold">Vans Men's Old Skool Sneakers</h1>
+                                <p class="text-sky-700 font-bold text-sm">Vans</p>
+                            </a>
+                            <div class="flex items-center gap-1 w-60">
+                                <div class="stars select-none">
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                </div>
+                                <p class="text-xs text-yellow-500 font-bold">4,8</p>
+                                <p class="text-xs font-bold">(21,032 reviews)</p>
+                            </div>
+                            <p class="font-bold text-xl">$51.00 <s class="text-xs font-thin text-gray-400">$79.98</s></p>
+                        </div>
+        
+                        <div class="hot-deal-box w-96 m-4 relative sm:w-60 sm:m-2">
+                            <span class="material-symbols-outlined absolute top-1 right-1 text-gray-400 select-none cursor-pointer" onclick="toggleFavorite(this)">
+                                favorite
+                            </span>
+                            <a href="Detail.html"v class="hot-deal-img-container flex justify-center bg-white rounded-xl select-none">
+                                <div class="img w-32 h-52">
+                                    <img class="w-full h-full object-contain " src="Image/vans2.jpg" alt="Image">
+                                </div>
+                            </a>
+                            <a href="Detail.html" class="hot-deal-info">
+                                <h1 class="font-bold">Unisex-Adult Authentic(tm) Core Classics</h1>
+                                <p class="text-sky-700 font-bold text-sm">Vans</p>
+                            </a>
+                            <div class="flex items-center gap-1 w-60">
+                                <div class="stars select-none">
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                </div>
+                                <p class="text-xs text-yellow-500 font-bold">4,7</p>
+                                <p class="text-xs font-bold">(33,568 reviews)</p>
+                            </div>
+                            <p class="font-bold text-xl">$64.95 <s class="text-xs font-thin text-gray-400">$74.95</s></p>
+                        </div>
+        
+                        <div class="hot-deal-box w-96 m-4 relative sm:w-60 sm:m-2">
+                            <span class="material-symbols-outlined absolute top-1 right-1 text-gray-400 select-none cursor-pointer" onclick="toggleFavorite(this)">
+                                favorite
+                            </span>
+                            <a href="Detail.html" class="hot-deal-img-container flex justify-center bg-white rounded-xl select-none">
+                                <div class="img w-32 h-52">
+                                    <img class="w-full h-full object-contain " src="Image/216934.jpg" alt="Image">
+                                </div>
+                            </a>
+                            <a href="Detail.html" class="hot-deal-info">
+                                <h1 class="font-bold">Dino Ranch Jon and Thunderbolt</h1>
+                                <p class="text-sky-700 font-bold text-sm">Jazwares</p>
+                            </a>
+                            <div class="flex items-center gap-1 w-60">
+                                <div class="stars select-none">
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                </div>
+                                <p class="text-xs text-yellow-500 font-bold">4,7</p>
+                                <p class="text-xs font-bold">(21,862 reviews)</p>
+                            </div>
+                            <p class="font-bold text-xl">$9.99 <s class="text-xs font-thin text-gray-400">$10.60</s></p>
+                        </div>
+        
+                        <div class="hot-deal-box w-96 m-4 relative sm:w-60 sm:m-2">
+                            <span class="material-symbols-outlined absolute top-1 right-1 text-gray-400 select-none cursor-pointer" onclick="toggleFavorite(this)">
+                                favorite
+                            </span>
+                            <a href="Detail.html" class="hot-deal-img-container flex justify-center bg-white rounded-xl select-none">
+                                <div class="img w-32 h-52">
+                                    <img class="w-full h-full object-contain " src="Image/Adidas-Backpack-Legend-Ink-white-front.jpg" alt="Image">
+                                </div>
+                            </a>
+                            <a href="Detail.html" class="hot-deal-info">
+                                <h1 class="font-bold">Unisex Alliance 2 Sackpack</h1>
+                                <p class="text-sky-700 font-bold text-sm">Adidas</p>
+                            </a>
+                            <div class="flex items-center gap-1 w-60">
+                                <div class="stars select-none">
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                </div>
+                                <p class="text-xs text-yellow-500 font-bold">4,8</p>
+                                <p class="text-xs font-bold">(21,232 reviews)</p>
+                            </div>
+                            <p class="font-bold text-xl">$16.80 <s class="text-xs font-thin text-gray-400">$17.00</s></p>
+                        </div>
+        
+                        <div class="hot-deal-box w-96 m-4 relative sm:w-60 sm:m-2">
+                            <span class="material-symbols-outlined absolute top-1 right-1 text-gray-400 select-none cursor-pointer" onclick="toggleFavorite(this)">
+                                favorite
+                            </span>
+                            <a href="Detail.html" class="hot-deal-img-container flex justify-center bg-white rounded-xl select-none">
+                                <div class="img w-32 h-52">
+                                    <img class="w-full h-full object-contain " src="Image/protein.jpg" alt="Image">
+                                </div>
+                            </a>
+                            <a href="Detail.html" class="hot-deal-info">
+                                <h1 class="font-bold">Dymatize Super Mass Gainer(6lbs)</h1>
+                                <p class="text-sky-700 font-bold text-sm">Dymatize</p>
+                            </a>
+                            <div class="flex items-center gap-1 w-60">
+                                <div class="stars select-none">
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                </div>
+                                <p class="text-xs text-yellow-500 font-bold">4,8</p>
+                                <p class="text-xs font-bold">(21,032 reviews)</p>
+                            </div>
+                            <p class="font-bold text-xl">$27.45 <s class="text-xs font-thin text-gray-400">$30.00</s></p>
+                        </div>
+        
+                        <div class="hot-deal-box w-96 m-4 relative sm:w-60 sm:m-2">
+                            <span class="material-symbols-outlined absolute top-1 right-1 text-gray-400 select-none cursor-pointer" onclick="toggleFavorite(this)">
+                                favorite
+                            </span>
+                            <a href="Detail.html" class="hot-deal-img-container flex justify-center bg-white rounded-xl select-none">
+                                <div class="img w-32 h-52">
+                                    <img class="w-full h-full object-contain " src="Image/bike.jfif" alt="Image">
+                                </div>
+                            </a>
+                            <a href="Detail.html" class="hot-deal-info">
+                                <h1 class="font-bold">Beats headphones</h1>
+                                <p class="text-sky-700 font-bold text-sm">Beats</p>
+                            </a>
+                            <div class="flex items-center gap-1 w-60">
+                                <div class="stars select-none">
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                </div>
+                                <p class="text-xs text-yellow-500 font-bold">4,8</p>
+                                <p class="text-xs font-bold">(21,032 reviews)</p>
+                            </div>
+                            <p class="font-bold text-xl">$290.00 <s class="text-xs font-thin text-gray-400">$320.00</s></p>
+                        </div>
+        
+                        <div class="hot-deal-box w-96 m-4 relative sm:w-60 sm:m-2">
+                            <span class="material-symbols-outlined absolute top-1 right-1 text-gray-400 select-none cursor-pointer" onclick="toggleFavorite(this)">
+                                favorite
+                            </span>
+                            <a href="Detail.html" class="hot-deal-img-container flex justify-center bg-white rounded-xl select-none">
+                                <div class="img w-32 h-52">
+                                    <img class="w-full h-full object-contain " src="Image/blender.jfif" alt="Image">
+                                </div>
+                            </a>
+                            <a href="Detail.html" class="hot-deal-info">
+                                <h1 class="font-bold">Beats headphones</h1>
+                                <p class="text-sky-700 font-bold text-sm">Beats</p>
+                            </a>
+                            <div class="flex items-center gap-1 w-60">
+                                <div class="stars select-none">
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                </div>
+                                <p class="text-xs text-yellow-500 font-bold">4,8</p>
+                                <p class="text-xs font-bold">(21,032 reviews)</p>
+                            </div>
+                            <p class="font-bold text-xl">$290.00 <s class="text-xs font-thin text-gray-400">$320.00</s></p>
+                        </div>
+        
+                        <div class="hot-deal-box w-96 m-4 relative sm:w-60 sm:m-2">
+                            <span class="material-symbols-outlined absolute top-1 right-1 text-gray-400 select-none cursor-pointer" onclick="toggleFavorite(this)">
+                                favorite
+                            </span>
+                            <a href="Detail.html" class="hot-deal-img-container flex justify-center bg-white rounded-xl select-none">
+                                <div class="img w-32 h-52">
+                                    <img class="w-full h-full object-contain " src="Image/clock.jfif" alt="Image">
+                                </div>
+                            </a>
+                            <a href="Detail.html" class="hot-deal-info">
+                                <h1 class="font-bold">Beats headphones</h1>
+                                <p class="text-sky-700 font-bold text-sm">Beats</p>
+                            </a>
+                            <div class="flex items-center gap-1 w-60">
+                                <div class="stars select-none">
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                </div>
+                                <p class="text-xs text-yellow-500 font-bold">4,8</p>
+                                <p class="text-xs font-bold">(21,032 reviews)</p>
+                            </div>
+                            <p class="font-bold text-xl">$290.00 <s class="text-xs font-thin text-gray-400">$320.00</s></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <section class="bg-orange-400 my-5 h-36 relative flex justify-center items-center lg:justify-start">
+        <div class="ml-0 lg:ml-20 p-3">
+            <h1 class="text-white font-light text-3xl mb-3 md:text-4xl">Let them choose the perfect gift</h1>
+            <a class="text-white font-bold flex items-center select-none" href="#">
+                Shop now
+                <span class="material-symbols-outlined text-xl" id="goForwardBtnn">
+                    chevron_right
+                </span>
+            </a>
+        </div>
+        <div class="bg-white p-6 w-48 h-30 rounded-lg absolute -top-3 right-44 -rotate-6 z-10 shadow-xl hidden justify-center lg:right-60 lg:flex">
+            <div class="img w-24 select-none">
+                <img class="w-full h-full object-cover" src="Image/amazon.jpg" alt="Image">
+                <img class="absolute top-1 right-2 w-12" src="Image/images.png" alt="image">
+            </div>
+        </div>
+        <div class="bg-neutral-950 p-8 w-48 h-30 rounded-lg absolute top-8 right-8 rotate-12 shadow-xl hidden justify-center lg:right-24 lg:flex">
+            <div class="img w-24 select-none">
+                <img class="w-full h-full object-cover" src="Image/amazon1.webp" alt="Image">
+                <img class="absolute top-2 right-2 w-10" src="Image/Amazon-Emblem.jpg" alt="image">
+            </div>
+        </div>
+    </section>
+
+    <section class="popular-catelog p-6">
+        <div class="hot-deal-container">
+            <div class="hot-deal-title font-bold text-gray-600 text-2xl sm:text-3xl">
+                <h1>Blox devices</h1>
+            </div>
+            <div class="hot-deal-btn flex gap-1 justify-end">
+                <span class="material-symbols-outlined text-3xl bg-gray-200 rounded-full w-9 h-9 p-1 flex items-center justify-center select-none cursor-pointer hover:bg-gray-300 transition-colors duration-150 sm:w-10 sm:h-10" id="goBackBtnn">
+                    chevron_left
+                </span>
+                <span class="material-symbols-outlined text-3xl bg-gray-200 rounded-full w-9 h-9 p-1 flex items-center justify-center select-none cursor-pointer hover:bg-gray-300 transition-colors duration-150 sm:w-10 sm:h-10" id="goForwardBtnn">
+                    chevron_right
+                </span>
+            </div>
+            <div class="hot-deal-wrapper flex overflow-auto">
+                <div class="hot-deal-box w-96 m-4 relative sm:w-60 sm:m-2">
+                    <span class="material-symbols-outlined absolute top-1 right-1 text-gray-400 select-none cursor-pointer" onclick="toggleFavorite(this)">
+                        favorite
+                    </span>
+                    <a href="Detail.html" class="hot-deal-img-container flex justify-center bg-white rounded-xl select-none">
+                        <div class="img w-32 h-52">
+                            <img class="w-full h-full object-contain " src="Image/bag.jpg" alt="Image">
+                        </div>
+                    </a>
+                    <a href="Detail.html" class="hot-deal-info">
+                        <h1 class="font-bold">Women's Rachel Tote Purse Handbag</h1>
+                        <p class="text-sky-700 font-bold text-sm">Estalon</p>
+                    </a>
+                    <div class="flex items-center gap-1 w-60">
+                        <div class="stars select-none">
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                        </div>
+                        <p class="text-xs text-yellow-500 font-bold">4,6</p>
+                        <p class="text-xs font-bold">(20,032 reviews)</p>
+                    </div>
+                    <p class="font-bold text-xl">$168.68 <s class="text-xs font-thin text-gray-400">$180.00</s></p>
+                </div>
+
+                <div class="hot-deal-box w-96 m-4 relative sm:w-60 sm:m-2">
+                    <span class="material-symbols-outlined absolute top-1 right-1 text-gray-400 select-none cursor-pointer" onclick="toggleFavorite(this)">
+                        favorite
+                    </span>
+                    <a href="Detail.html" class="hot-deal-img-container flex justify-center bg-white rounded-xl select-none">
+                        <div class="img w-32 h-52">
+                            <img class="w-full h-full object-contain " src="Image/vans.jpg" alt="Image">
+                        </div>
+                    </a>
+                    <a href="Detail.html"s class="hot-deal-info">
+                        <h1 class="font-bold">Vans Men's Old Skool Sneakers</h1>
+                        <p class="text-sky-700 font-bold text-sm">Vans</p>
+                    </a>
+                    <div class="flex items-center gap-1 w-60">
+                        <div class="stars select-none">
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                        </div>
+                        <p class="text-xs text-yellow-500 font-bold">4,8</p>
+                        <p class="text-xs font-bold">(21,032 reviews)</p>
+                    </div>
+                    <p class="font-bold text-xl">$51.00 <s class="text-xs font-thin text-gray-400">$79.98</s></p>
+                </div>
+
+                <div class="hot-deal-box w-96 m-4 relative sm:w-60 sm:m-2">
+                    <span class="material-symbols-outlined absolute top-1 right-1 text-gray-400 select-none cursor-pointer" onclick="toggleFavorite(this)">
+                        favorite
+                    </span>
+                    <a href="Detail.html"v class="hot-deal-img-container flex justify-center bg-white rounded-xl select-none">
+                        <div class="img w-32 h-52">
+                            <img class="w-full h-full object-contain " src="Image/vans2.jpg" alt="Image">
+                        </div>
+                    </a>
+                    <a href="Detail.html" class="hot-deal-info">
+                        <h1 class="font-bold">Unisex-Adult Authentic(tm) Core Classics</h1>
+                        <p class="text-sky-700 font-bold text-sm">Vans</p>
+                    </a>
+                    <div class="flex items-center gap-1 w-60">
+                        <div class="stars select-none">
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                        </div>
+                        <p class="text-xs text-yellow-500 font-bold">4,7</p>
+                        <p class="text-xs font-bold">(33,568 reviews)</p>
+                    </div>
+                    <p class="font-bold text-xl">$64.95 <s class="text-xs font-thin text-gray-400">$74.95</s></p>
+                </div>
+
+                <div class="hot-deal-box w-96 m-4 relative sm:w-60 sm:m-2">
+                    <span class="material-symbols-outlined absolute top-1 right-1 text-gray-400 select-none cursor-pointer" onclick="toggleFavorite(this)">
+                        favorite
+                    </span>
+                    <a href="Detail.html" class="hot-deal-img-container flex justify-center bg-white rounded-xl select-none">
+                        <div class="img w-32 h-52">
+                            <img class="w-full h-full object-contain " src="Image/216934.jpg" alt="Image">
+                        </div>
+                    </a>
+                    <a href="Detail.html" class="hot-deal-info">
+                        <h1 class="font-bold">Dino Ranch Jon and Thunderbolt</h1>
+                        <p class="text-sky-700 font-bold text-sm">Jazwares</p>
+                    </a>
+                    <div class="flex items-center gap-1 w-60">
+                        <div class="stars select-none">
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                        </div>
+                        <p class="text-xs text-yellow-500 font-bold">4,7</p>
+                        <p class="text-xs font-bold">(21,862 reviews)</p>
+                    </div>
+                    <p class="font-bold text-xl">$9.99 <s class="text-xs font-thin text-gray-400">$10.60</s></p>
+                </div>
+
+                <div class="hot-deal-box w-96 m-4 relative sm:w-60 sm:m-2">
+                    <span class="material-symbols-outlined absolute top-1 right-1 text-gray-400 select-none cursor-pointer" onclick="toggleFavorite(this)">
+                        favorite
+                    </span>
+                    <a href="Detail.html" class="hot-deal-img-container flex justify-center bg-white rounded-xl select-none">
+                        <div class="img w-32 h-52">
+                            <img class="w-full h-full object-contain " src="Image/Adidas-Backpack-Legend-Ink-white-front.jpg" alt="Image">
+                        </div>
+                    </a>
+                    <a href="Detail.html" class="hot-deal-info">
+                        <h1 class="font-bold">Unisex Alliance 2 Sackpack</h1>
+                        <p class="text-sky-700 font-bold text-sm">Adidas</p>
+                    </a>
+                    <div class="flex items-center gap-1 w-60">
+                        <div class="stars select-none">
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                        </div>
+                        <p class="text-xs text-yellow-500 font-bold">4,8</p>
+                        <p class="text-xs font-bold">(21,232 reviews)</p>
+                    </div>
+                    <p class="font-bold text-xl">$16.80 <s class="text-xs font-thin text-gray-400">$17.00</s></p>
+                </div>
+
+                <div class="hot-deal-box w-96 m-4 relative sm:w-60 sm:m-2">
+                    <span class="material-symbols-outlined absolute top-1 right-1 text-gray-400 select-none cursor-pointer" onclick="toggleFavorite(this)">
+                        favorite
+                    </span>
+                    <a href="Detail.html" class="hot-deal-img-container flex justify-center bg-white rounded-xl select-none">
+                        <div class="img w-32 h-52">
+                            <img class="w-full h-full object-contain " src="Image/protein.jpg" alt="Image">
+                        </div>
+                    </a>
+                    <a href="Detail.html" class="hot-deal-info">
+                        <h1 class="font-bold">Dymatize Super Mass Gainer(6lbs)</h1>
+                        <p class="text-sky-700 font-bold text-sm">Dymatize</p>
+                    </a>
+                    <div class="flex items-center gap-1 w-60">
+                        <div class="stars select-none">
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                        </div>
+                        <p class="text-xs text-yellow-500 font-bold">4,8</p>
+                        <p class="text-xs font-bold">(21,032 reviews)</p>
+                    </div>
+                    <p class="font-bold text-xl">$27.45 <s class="text-xs font-thin text-gray-400">$30.00</s></p>
+                </div>
+
+                <div class="hot-deal-box w-96 m-4 relative sm:w-60 sm:m-2">
+                    <span class="material-symbols-outlined absolute top-1 right-1 text-gray-400 select-none cursor-pointer" onclick="toggleFavorite(this)">
+                        favorite
+                    </span>
+                    <a href="Detail.html" class="hot-deal-img-container flex justify-center bg-white rounded-xl select-none">
+                        <div class="img w-32 h-52">
+                            <img class="w-full h-full object-contain " src="Image/bike.jfif" alt="Image">
+                        </div>
+                    </a>
+                    <a href="Detail.html" class="hot-deal-info">
+                        <h1 class="font-bold">Beats headphones</h1>
+                        <p class="text-sky-700 font-bold text-sm">Beats</p>
+                    </a>
+                    <div class="flex items-center gap-1 w-60">
+                        <div class="stars select-none">
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                        </div>
+                        <p class="text-xs text-yellow-500 font-bold">4,8</p>
+                        <p class="text-xs font-bold">(21,032 reviews)</p>
+                    </div>
+                    <p class="font-bold text-xl">$290.00 <s class="text-xs font-thin text-gray-400">$320.00</s></p>
+                </div>
+
+                <div class="hot-deal-box w-96 m-4 relative sm:w-60 sm:m-2">
+                    <span class="material-symbols-outlined absolute top-1 right-1 text-gray-400 select-none cursor-pointer" onclick="toggleFavorite(this)">
+                        favorite
+                    </span>
+                    <a href="Detail.html" class="hot-deal-img-container flex justify-center bg-white rounded-xl select-none">
+                        <div class="img w-32 h-52">
+                            <img class="w-full h-full object-contain " src="Image/blender.jfif" alt="Image">
+                        </div>
+                    </a>
+                    <a href="Detail.html" class="hot-deal-info">
+                        <h1 class="font-bold">Beats headphones</h1>
+                        <p class="text-sky-700 font-bold text-sm">Beats</p>
+                    </a>
+                    <div class="flex items-center gap-1 w-60">
+                        <div class="stars select-none">
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                        </div>
+                        <p class="text-xs text-yellow-500 font-bold">4,8</p>
+                        <p class="text-xs font-bold">(21,032 reviews)</p>
+                    </div>
+                    <p class="font-bold text-xl">$290.00 <s class="text-xs font-thin text-gray-400">$320.00</s></p>
+                </div>
+
+                <div class="hot-deal-box w-96 m-4 relative sm:w-60 sm:m-2">
+                    <span class="material-symbols-outlined absolute top-1 right-1 text-gray-400 select-none cursor-pointer" onclick="toggleFavorite(this)">
+                        favorite
+                    </span>
+                    <a href="Detail.html" class="hot-deal-img-container flex justify-center bg-white rounded-xl select-none">
+                        <div class="img w-32 h-52">
+                            <img class="w-full h-full object-contain " src="Image/clock.jfif" alt="Image">
+                        </div>
+                    </a>
+                    <a href="Detail.html" class="hot-deal-info">
+                        <h1 class="font-bold">Beats headphones</h1>
+                        <p class="text-sky-700 font-bold text-sm">Beats</p>
+                    </a>
+                    <div class="flex items-center gap-1 w-60">
+                        <div class="stars select-none">
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                        </div>
+                        <p class="text-xs text-yellow-500 font-bold">4,8</p>
+                        <p class="text-xs font-bold">(21,032 reviews)</p>
+                    </div>
+                    <p class="font-bold text-xl">$290.00 <s class="text-xs font-thin text-gray-400">$320.00</s></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 pt-24 px-0 pb-2 divide-y divide-slate-800 sm:px-16 lg:px-20">
+        <div class="flex flex-col gap-10 justify-between text-white pb-5 xl:flex-row lg:pb-36">
+            <div class="flex gap-0 mb-10 text-white justify-around md:gap-40">
+                <div class="flex flex-col gap-36 lg:flex-row">
+                    <div class="flex flex-col gap-5">
+                        <p>Solutions</p>
+                        <a href="">Marketing</a>
+                        <a href="">Analytics</a>
+                        <a href="">Commerce</a>
+                        <a href="">Insights</a>
+                    </div>
+                    <div class="flex flex-col gap-5">
+                        <p>Support</p>
+                        <a href="">Pricing</a>
+                        <a href="">Documentation</a>
+                        <a href="">Guides</a>
+                        <a href="">API Status</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-36 lg:flex-row">
+                    <div class="flex flex-col gap-5">
+                        <p>Company</p>
+                        <a href="">About</a>
+                        <a href="">Blog</a>
+                        <a href="">Jobs</a>
+                        <a href="">Press</a>
+                        <a href="">Partners</a>
+                    </div>
+                    <div class="flex flex-col gap-5">
+                        <p>Legal</p>
+                        <a href="">Claim</a>
+                        <a href="">Privacy</a>
+                        <a href="">Terms</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col justify-center px-3 lg:pl-10">
+                <h2>Subscribe to our newsletter</h2>
+                <p class="mb-5">The latest news, articles, and resources, sent to your inbox weekly.</p>
+                <div class="w-full flex flex-col gap-4 text-center lg:flex-row">
+                    <input type="text" placeholder="Enter your email" class="bg-slate-800 border-2 border-slate-700 rounded-lg p-2 ">
+                    <span class="ml-0 bg-indigo-900 p-3 rounded-lg select-none lg:ml-5"><a href="#">Subcribe</a></span>
+                </div>
+            </div>
+        </div>
+       <div class="flex flex-col justify-between items-center lg:flex-row">
+            <div>
+                <p class="text-zinc-500 py-5">2024 Blox, Inc. All rights reserved.</p>
+            </div>
+            <div class="space-x-6">
+                <i class="fa-brands fa-x-twitter text-zinc-500 text-3xl"></i>
+                <i class="fa-brands fa-instagram text-zinc-500 text-3xl"></i>
+                <i class="fa-brands fa-facebook text-zinc-500 text-3xl"></i>
+            </div>
+       </div>
+    </footer>
+
+    <script src="index.js"></script>
+
+</body>
+</html>

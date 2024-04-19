@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppings", sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+.custom-shape-divider-top-1713040369 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+.custom-shape-divider-top-1713040369 svg {
+    position: relative;
+    display: block;
+    width: calc(165% + 1.3px);
+    height: 280px;
+}
+.custom-shape-divider-top-1713040369 .shape-fill {
+    fill: #f19e18;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-top-1713533848 svg {
+        width: calc(300% + 1.3px);
+        height: 322px;
+    }
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-top-1713533749 svg {
+        width: calc(300% + 1.3px);
+        height: 320px;
+    }
+}
+/* Styling the horizontal scrollbar */
+.popular-catelog-items::-webkit-scrollbar,
+.hot-deal-wrapper::-webkit-scrollbar {
+    height: 0px;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    height: 5px;
+}  
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #d47a03;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #dd8716;
+}
+.notification-item::-webkit-scrollbar {
+    width: 5px;
+}
+.notification-item::-webkit-scrollbar-track {
+    background: transparent;
+}
+.notification-item::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 4px; 
+}
+.notification-item:hover::-webkit-scrollbar-thumb {
+    background: #ececec;
+}
+::selection {
+    background-color: rgb(219, 219, 219);
+}
+.advertize-box2 {
+    width: 34em;
+}
+
