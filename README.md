@@ -21,7 +21,7 @@ Welcome to my E-commerce Shopping Website! This project is a front-end implement
 ![TailWindCSS (2)](https://github.com/BrandonBlkk/Shopping-Website/assets/141344965/e3fabe44-a327-4363-8b17-53a96f911323)
 
 #### Detail Page
-![TailWindCSS (4)](https://github.com/BrandonBlkk/Shopping-Website/assets/141344965/09608726-4a61-4cc2-892a-0c4a98e6cb9c)
+![TailWindCSS (5)](https://github.com/BrandonBlkk/Shopping-Website/assets/141344965/a940dcd6-2b42-4b76-ae13-74799fc875b0)
 
 #### Favorite Page
 ![2](https://github.com/BrandonBlkk/Shopping-Website/assets/141344965/70525486-ebdf-41f2-a1e3-076addff079c)
