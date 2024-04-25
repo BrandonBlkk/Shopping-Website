@@ -18,30 +18,30 @@ Welcome to my E-commerce Shopping Website! This project is a front-end implement
 ## Screenshots
 
 #### Main Page
-![TailWindCSS (2)](https://github.com/BrandonBlkk/Shopping-Website/assets/141344965/e3fabe44-a327-4363-8b17-53a96f911323)
+<img src="https://github.com/BrandonBlkk/Shopping-Website/assets/141344965/e3fabe44-a327-4363-8b17-53a96f911323" alt="Main Page" width="500">
 
 #### Detail Page
-![TailWindCSS (5)](https://github.com/BrandonBlkk/Shopping-Website/assets/141344965/a940dcd6-2b42-4b76-ae13-74799fc875b0)
+<img src="https://github.com/BrandonBlkk/Shopping-Website/assets/141344965/a940dcd6-2b42-4b76-ae13-74799fc875b0" alt="Main Page" width="500">
 
 #### Favorite Page
-![2](https://github.com/BrandonBlkk/Shopping-Website/assets/141344965/70525486-ebdf-41f2-a1e3-076addff079c)
+<img src="https://github.com/BrandonBlkk/Shopping-Website/assets/141344965/70525486-ebdf-41f2-a1e3-076addff079c" alt="Main Page" width="500">
 
 #### Add to Cart Page
-![1](https://github.com/BrandonBlkk/Shopping-Website/assets/141344965/3a5e600c-9a5d-4a5c-be19-41319eb40933)
+<img src="https://github.com/BrandonBlkk/Shopping-Website/assets/141344965/3a5e600c-9a5d-4a5c-be19-41319eb40933" alt="Main Page" width="500">
 
 ### Mobile View
 
 #### Main Page
-![Screenshot 2024-04-20 001635](https://github.com/BrandonBlkk/Shopping-Website/assets/141344965/36762c0c-6c2d-424c-9d8a-2e5c43738439)
+<img src="https://github.com/BrandonBlkk/Shopping-Website/assets/141344965/36762c0c-6c2d-424c-9d8a-2e5c43738439" alt="Main Page" width="300">
 
 #### Detail Page
-![Screenshot 2024-04-20 001649](https://github.com/BrandonBlkk/Shopping-Website/assets/141344965/d1a058bd-dff8-4bb4-823e-b46314e23c2a)
+<img src="https://github.com/BrandonBlkk/Shopping-Website/assets/141344965/d1a058bd-dff8-4bb4-823e-b46314e23c2a" alt="Detail Page" width="300">
 
 #### Favorite Page
-![Screenshot 2024-04-20 001615](https://github.com/BrandonBlkk/Shopping-Website/assets/141344965/e94528ea-294e-45b7-a79e-ded4f7ee6051)
+<img src="https://github.com/BrandonBlkk/Shopping-Website/assets/141344965/e94528ea-294e-45b7-a79e-ded4f7ee6051" alt="Favorite Page" width="300">
 
 #### Add to Cart Page
-![Screenshot 2024-04-20 001711](https://github.com/BrandonBlkk/Shopping-Website/assets/141344965/a2037b91-1cbe-40bc-bd36-90981f99d156)
+<img src="https://github.com/BrandonBlkk/Shopping-Website/assets/141344965/a2037b91-1cbe-40bc-bd36-90981f99d156" alt="Add to Cart Page" width="300">
 
 ## Technologies Used
 
