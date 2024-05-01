@@ -209,12 +209,12 @@
                             <p class="text-white">Shopping Cart</p>
                         </div>
                     </a>
-                   <div class="flex gap-5 p-2" onclick="notiPopUp()">
-                        <span class="material-symbols-outlined text-white hover:text-gray-300 transition-colors duration-150">
-                            notifications
-                        </span>
-                        <p class="text-white">Notifications</p>
-                   </div>
+                    <div class="flex gap-5 p-2" onclick="notiPopUp()">
+                            <span class="material-symbols-outlined text-white hover:text-gray-300 transition-colors duration-150">
+                                notifications
+                            </span>
+                            <p class="text-white">Notifications</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -247,240 +247,133 @@
         </ul>
     </div>
 
-    
-    
     <section class="main-section flex-1 p-6" id="main-section">
         <h1 class="font-bold text-gray-500 text-3xl mb-6">Shopping Cart</h1>
 
         <div class="overflow-x-auto">
             <table class="table-auto border-collapse w-full">
-              <thead>
-                <tr>
-                  <th class="px-4 py-2">Product</th>
-                  <th class="px-4 py-2"></th>
-                  <th class="px-4 py-2">Count</th>
-                  <th class="px-4 py-2">Total Cost</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="px-2 py-2">
-                    <div class="cart-items-img w-40 h-24 p-4 rounded-lg select-none">
-                        <img class="w-full h-full object-contain" src="Image/mac.jpg" alt="Image">
-                    </div>
-                  </td>
-                  <td class="px-4 py-2">
-                    <a href="Detail.html" class="cart-items-detail flex-grow">
-                        <div class="cart-item-title font-bold">
-                            Apple MacBook Pro 13.3
-                        </div>
-                        <div class="cart-item-brand text-gray-400">
-                            Apple
-                        </div>
-                    </a>
-                  </td>
-                  <td class="px-4 py-2">
-                    <div class="counter-box flex items-center text-gray-400 select-none">
-                        <span class="material-symbols-outlined cursor-pointer text-base w-6 bg-gray-100 rounded flex justify-center mr-1 hover:bg-gray-200 transition-colors duration-200" onclick="remove()">
-                            arrow_back_ios
+                <thead>
+                    <tr>
+                    <th class="px-4 py-2">Product</th>
+                    <th class="px-4 py-2"></th>
+                    <th class="px-4 py-2">Count</th>
+                    <th class="px-4 py-2">Total Cost</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                        <tr>
+                        <td class="px-2 py-2">
+                            <div class="cart-items-img w-40 h-24 p-4 rounded-lg select-none">
+                                <img class="w-full h-full object-contain" src="Image/mac.jpg" alt="Image">
+                            </div>
+                        </td>
+                        <td class="px-4 py-2">
+                            <a href="Detail.html" class="cart-items-detail flex-grow">
+                                <div class="cart-item-title font-bold">
+                                    Apple MacBook Pro 13.3
+                                </div>
+                                <div class="cart-item-brand text-gray-400">
+                                    Apple
+                                </div>
+                            </a>
+                        </td>
+                        <td class="px-4 py-2">
+                            <div class="counter-box flex items-center text-gray-400 select-none">
+                                <span class="decreaseBtn material-symbols-outlined cursor-pointer text-base w-6 bg-gray-100 rounded flex justify-center mr-1 hover:bg-gray-200 transition-colors duration-200">
+                                    arrow_back_ios
+                                    </span>
+                                <span>x</span><p class="Quantity">1</p>
+                                <span class="increaseBtn material-symbols-outlined cursor-pointer text-base w-6 bg-gray-100 rounded flex justify-center ml-1 hover:bg-gray-200 transition-colors duration-200">
+                                    arrow_forward_ios
+                                </span>
+                            </div>
+                        </td>
+                        <td class="px-4 py-2 text-gray-400">
+                            <p>$1,149.00</p>
+                        </td>
+                        <td class="px-4 py-10 text-gray-400 cursor-pointer flex hover:text-red-400 transition-colors duration-200">
+                            <span class="material-symbols-outlined select-none">
+                                cancel
                             </span>
-                        <span>x</span><p id="Quantity">1</p>
-                        <span class="material-symbols-outlined cursor-pointer text-base w-6 bg-gray-100 rounded flex justify-center ml-1 hover:bg-gray-200 transition-colors duration-200" onclick="addQuantity()">
-                            arrow_forward_ios
-                            </span>
-                    </div>
-                  </td>
-                  <td class="px-4 py-2 text-gray-400">
-                    <p>$1,149.00</p>
-                  </td>
-                  <td class="px-4 py-10 text-gray-400 cursor-pointer flex hover:text-red-400 transition-colors duration-200">
-                    <span class="material-symbols-outlined select-none">
-                        cancel
-                    </span>
-                  </td>
-                </tr>
+                        </td>
+                        </tr>
 
-                <tr>
-                    <td class="px-4 py-2">
-                      <div class="cart-items-img w-40 h-24 p-4 rounded-lg select-none">
-                        <img class="w-full h-full object-contain" src="Image/beat.jfif" alt="Image">
-                      </div>
-                    </td>
-                    <td class="px-4 py-2">
-                      <a href="Detail.html" class="cart-items-detail flex-grow">
-                          <div class="cart-item-title font-bold">
-                                Beats Studio3 Wireless Headphones
-                          </div>
-                          <div class="cart-item-brand text-gray-400">
-                                Beats
-                          </div>
-                      </a>
-                    </td>
-                    <td class="px-4 py-2">
-                      <div class="counter-box flex items-center text-gray-400 select-none">
-                          <span class="material-symbols-outlined cursor-pointer text-base w-6 bg-gray-100 rounded flex justify-center mr-1 hover:bg-gray-200 transition-colors duration-200" onclick="remove()">
-                              arrow_back_ios
-                              </span>
-                          <span>x</span><p id="Quantity">1</p>
-                          <span class="material-symbols-outlined cursor-pointer text-base w-6 bg-gray-100 rounded flex justify-center ml-1 hover:bg-gray-200 transition-colors duration-200" onclick="addQuantity()">
-                              arrow_forward_ios
-                              </span>
-                      </div>
-                    </td>
-                    <td class="px-4 py-2 text-gray-400">
-                      <p>$180.99</p>
-                    </td>
-                    <td class="px-4 py-10 text-gray-400 cursor-pointer flex hover:text-red-400 transition-colors duration-200">
-                      <span class="material-symbols-outlined select-none">
-                          cancel
-                      </span>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td class="px-4 py-2">
-                      <div class="cart-items-img w-40 h-24 p-4 rounded-lg select-none">
-                          <img class="w-full h-full object-contain" src="Image/nin.jpg" alt="Image">
-                      </div>
-                    </td>
-                    <td class="px-4 py-2">
-                      <a href="Detail.html" class="cart-items-detail flex-grow">
-                          <div class="cart-item-title font-bold">
-                                Nintendo Switch
-                          </div>
-                          <div class="cart-item-brand text-gray-400">
-                                Nintendo
-                          </div>
-                      </a>
-                    </td>
-                    <td class="px-4 py-2">
-                      <div class="counter-box flex items-center text-gray-400 select-none">
-                          <span class="material-symbols-outlined cursor-pointer text-base w-6 bg-gray-100 rounded flex justify-center mr-1 hover:bg-gray-200 transition-colors duration-200" onclick="remove()">
-                              arrow_back_ios
-                              </span>
-                          <span>x</span><p id="Quantity">1</p>
-                          <span class="material-symbols-outlined cursor-pointer text-base w-6 bg-gray-100 rounded flex justify-center ml-1 hover:bg-gray-200 transition-colors duration-200" onclick="addQuantity()">
-                              arrow_forward_ios
-                              </span>
-                      </div>
-                    </td>
-                    <td class="px-4 py-2 text-gray-400">
-                      <p>$290.00</p>
-                    </td>
-                    <td class="px-4 py-10 text-gray-400 cursor-pointer flex hover:text-red-400 transition-colors duration-200">
-                      <span class="material-symbols-outlined select-none">
-                          cancel
-                      </span>
-                    </td>
-                  </tr>
-              </tbody>
-            </table>
-          </div>
-          
-
-        <!-- <div class="font-bold text-gray-400 flex">
-            <h2 class="flex-grow">Product</h2>
-            <h2 class="w-32 lg:w-60">Count</h2>
-            <h2 class="w-32 lg:w-60">Total Cost</h2>
-            <span class="w-10"></span>
-        </div>
-        <div class="cart-items mt-5">
-            <div class="cart-item flex items-center pb-4 border-b border-gray-200">
-                <div class="cart-items-img w-40 h-24 p-4 rounded-lg select-none">
-                    <img class="w-full h-full object-contain" src="Image/mac.jpg" alt="Image">
-                </div>
-                <a href="Detail.html" class="cart-items-detail flex-grow">
-                    <div class="cart-item-title font-bold">
-                        Apple MacBook Pro 13.3
-                    </div>
-                    <div class="cart-item-brand text-gray-400">
-                        Apple
-                    </div>
-                </a>
-                <div class="cart-items-counter w-32 lg:w-60">
-                    <div class="counter-box flex items-center text-gray-400 select-none">
-                        <span class="material-symbols-outlined cursor-pointer text-base w-6 bg-gray-100 rounded flex justify-center mr-1 hover:bg-gray-200 transition-colors duration-200" onclick="remove()">
-                            arrow_back_ios
+                        <tr>
+                            <td class="px-4 py-2">
+                            <div class="cart-items-img w-40 h-24 p-4 rounded-lg select-none">
+                                <img class="w-full h-full object-contain" src="Image/beat.jfif" alt="Image">
+                            </div>
+                            </td>
+                            <td class="px-4 py-2">
+                            <a href="Detail.html" class="cart-items-detail flex-grow">
+                                <div class="cart-item-title font-bold">
+                                        Beats Studio3 Wireless Headphones
+                                </div>
+                                <div class="cart-item-brand text-gray-400">
+                                        Beats
+                                </div>
+                            </a>
+                            </td>
+                            <td class="px-4 py-2">
+                            <div class="counter-box flex items-center text-gray-400 select-none">
+                                <span class="decreaseBtn material-symbols-outlined cursor-pointer text-base w-6 bg-gray-100 rounded flex justify-center mr-1 hover:bg-gray-200 transition-colors duration-200">
+                                    arrow_back_ios
+                                    </span>
+                                <span>x</span><p class="Quantity">1</p>
+                                <span class="increaseBtn material-symbols-outlined cursor-pointer text-base w-6 bg-gray-100 rounded flex justify-center ml-1 hover:bg-gray-200 transition-colors duration-200">
+                                    arrow_forward_ios
+                                </span>
+                            </div>
+                            </td>
+                            <td class="px-4 py-2 text-gray-400">
+                            <p>$180.99</p>
+                            </td>
+                            <td class="px-4 py-10 text-gray-400 cursor-pointer flex hover:text-red-400 transition-colors duration-200">
+                            <span class="material-symbols-outlined select-none">
+                                cancel
                             </span>
-                        <span>x</span><p id="Quantity">1</p>
-                        <span class="material-symbols-outlined cursor-pointer text-base w-6 bg-gray-100 rounded flex justify-center ml-1 hover:bg-gray-200 transition-colors duration-200" onclick="addQuantity()">
-                            arrow_forward_ios
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="px-4 py-2">
+                            <div class="cart-items-img w-40 h-24 p-4 rounded-lg select-none">
+                                <img class="w-full h-full object-contain" src="Image/nin.jpg" alt="Image">
+                            </div>
+                            </td>
+                            <td class="px-4 py-2">
+                            <a href="Detail.html" class="cart-items-detail flex-grow">
+                                <div class="cart-item-title font-bold">
+                                        Nintendo Switch
+                                </div>
+                                <div class="cart-item-brand text-gray-400">
+                                        Nintendo
+                                </div>
+                            </a>
+                            </td>
+                            <td class="px-4 py-2">
+                            <div class="counter-box flex items-center text-gray-400 select-none">
+                                <span class="decreaseBtn material-symbols-outlined cursor-pointer text-base w-6 bg-gray-100 rounded flex justify-center mr-1 hover:bg-gray-200 transition-colors duration-200">
+                                    arrow_back_ios
+                                    </span>
+                                <span>x</span><p class="Quantity">1</p>
+                                <span class="increaseBtn material-symbols-outlined cursor-pointer text-base w-6 bg-gray-100 rounded flex justify-center ml-1 hover:bg-gray-200 transition-colors duration-200">
+                                    arrow_forward_ios
+                                </span>
+                            </div>
+                            </td>
+                            <td class="px-4 py-2 text-gray-400">
+                            <p>$290.00</p>
+                            </td>
+                            <td class="px-4 py-10 text-gray-400 cursor-pointer flex hover:text-red-400 transition-colors duration-200">
+                            <span class="material-symbols-outlined select-none">
+                                cancel
                             </span>
-                    </div>
-                </div>
-                <div class="cart-items-cost w-32 text-gray-400 lg:w-60">
-                    <p>$1,149.00</p>
-                </div>
-                <div class="cart-items-delete w-10 text-gray-400 cursor-pointer flex hover:text-red-400 transition-colors duration-200">
-                    <span class="material-symbols-outlined select-none">
-                        cancel
-                        </span>
-                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <div class="cart-item flex items-center pb-4 border-b border-gray-200">
-                <div class="cart-items-img w-40 h-24 p-4 rounded-lg select-none">
-                    <img class="w-full h-full object-contain" src="Image/beat.jfif" alt="Image">
-                </div>
-                <a href="Detail.html" class="cart-items-detail flex-grow">
-                    <div class="cart-item-title font-bold">
-                        Beats Studio3 Wireless Headphones
-                    </div>
-                    <div class="cart-item-brand text-gray-400">
-                        Beats
-                    </div>
-                </a>
-                <div class="cart-items-counter w-32 lg:w-60">
-                    <div class="counter-box flex items-center text-gray-400 select-none">
-                        <span class="material-symbols-outlined cursor-pointer text-base w-6 bg-gray-100 rounded flex justify-center mr-1 hover:bg-gray-200 transition-colors duration-200">
-                            arrow_back_ios
-                            </span>
-                        <span>x</span><p id="count">1</p>
-                        <span class="material-symbols-outlined cursor-pointer text-base w-6 bg-gray-100 rounded flex justify-center ml-1 hover:bg-gray-200 transition-colors duration-200">
-                            arrow_forward_ios
-                            </span>
-                    </div>
-                </div>
-                <div class="cart-items-cost w-32 text-gray-400 lg:w-60">
-                    <p>$180.99</p>
-                </div>
-                <div class="cart-items-delete w-10 text-gray-400 cursor-pointer flex hover:text-red-400 transition-colors duration-200">
-                    <span class="material-symbols-outlined select-none">
-                        cancel
-                        </span>
-                </div>
-            </div>
-            <div class="cart-item flex items-center pb-4 border-b border-gray-200">
-                <div class="cart-items-img w-40 h-24 p-4 rounded-lg select-none">
-                    <img class="w-full h-full object-contain" src="Image/nin.jpg" alt="Image">
-                </div>
-                <a href="Detail.html" class="cart-items-detail flex-grow">
-                    <div class="cart-item-title font-bold">
-                        Nintendo Switch
-                    </div>
-                    <div class="cart-item-brand text-gray-400">
-                        Nintendo
-                    </div>
-                </a>
-                <div class="cart-items-counter w-32 lg:w-60">
-                    <div class="counter-box flex items-center text-gray-400 select-none">
-                        <span class="material-symbols-outlined cursor-pointer text-base w-6 bg-gray-100 rounded flex justify-center mr-1 hover:bg-gray-200 transition-colors duration-200">
-                            arrow_back_ios
-                            </span>
-                        <span>x</span><p id="count">1</p>
-                        <span class="material-symbols-outlined cursor-pointer text-base w-6 bg-gray-100 rounded flex justify-center ml-1 hover:bg-gray-200 transition-colors duration-200">
-                            arrow_forward_ios
-                            </span>
-                    </div>
-                </div>
-                <div class="cart-items-cost w-32 text-gray-400 lg:w-60">
-                    <p>$290.00</p>
-                </div>
-                <div class="cart-items-delete w-10 text-gray-400 cursor-pointer flex hover:text-red-400 transition-colors duration-200">
-                    <span class="material-symbols-outlined select-none">
-                        cancel
-                        </span>
-                </div>
-            </div> -->
             <div class="flex justify-end p-5" id="payment-form">
                 <div class="total-cost mx-5">
                     <div class="flex items-center justify-between gap-2 w-52 mb-1">
@@ -634,7 +527,7 @@
                 <p class="mb-5">The latest news, articles, and resources, sent to your inbox weekly.</p>
                 <div class="w-full flex flex-col gap-4 text-center lg:flex-row">
                     <input type="text" placeholder="Enter your email" class="bg-slate-800 border-2 border-slate-700 rounded-lg p-2 ">
-                    <span class="ml-0 bg-indigo-900 p-3 rounded-lg select-none lg:ml-5"><a href="#">Subcribe</a></span>
+                    <span class="ml-0 bg-indigo-900 p-3 rounded-lg select-none cursor-pointer lg:ml-5"><a href="#">Subcribe</a></span>
                 </div>
             </div>
         </div>
@@ -642,7 +535,7 @@
             <div>
                 <p class="text-zinc-500 py-5">2024 Blox, Inc. All rights reserved.</p>
             </div>
-            <div class="space-x-6">
+            <div class="space-x-6 cursor-pointer">
                 <i class="fa-brands fa-x-twitter text-zinc-500 text-3xl"></i>
                 <i class="fa-brands fa-instagram text-zinc-500 text-3xl"></i>
                 <i class="fa-brands fa-facebook text-zinc-500 text-3xl"></i>
