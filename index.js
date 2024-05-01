@@ -63,30 +63,62 @@ function morePopUp() {
 }
 
 //Button to move forward and backward
-const container = document.querySelector('.popular-catelog-items');
-const goBackBtn = document.getElementById('goBackBtn');
-const goForwardBtn = document.getElementById('goForwardBtn');
+document.addEventListener('DOMContentLoaded', () => {
+    const popularCatelogItems = document.querySelector('.popular-catelog-items');
+    const goBackBtn = document.getElementById('goBackBtn');
+    const goForwardBtn = document.getElementById('goForwardBtn');
 
-goBackBtn.addEventListener('click', () => {
-    container.scrollLeft -= 100; 
+    goBackBtn.addEventListener('click', () => {
+        popularCatelogItems.scrollLeft -= 100; 
+    });
+
+    goForwardBtn.addEventListener('click', () => {
+        popularCatelogItems.scrollLeft += 100;
+    });
 });
 
-goForwardBtn.addEventListener('click', () => {
-    container.scrollLeft += 100;
-});
 
 //Button to move forward and backward
-const hotContainer = document.querySelector('.hot-deal-wrapper');
-const goBackBtnn = document.getElementById('goBackBtnn');
-const goForwardBtnn = document.getElementById('goForwardBtnn');
+const hotDealContainer = document.querySelectorAll('.hot-deal-container');
 
-goBackBtnn.addEventListener('click', () => {
-    hotContainer.scrollLeft -= 250; 
-});
+hotDealContainer.forEach(container => {
+    const hotContainer = container.querySelector('.hot-deal-wrapper');
+    const prevBtn = container.querySelector('.prev-btn');
+    const nextBtn = container.querySelector('.next-btn');
 
-goForwardBtnn.addEventListener('click', () => {
-    hotContainer.scrollLeft += 250;
-});
+    prevBtn.addEventListener('click', () => {
+        hotContainer.scrollLeft -= 250;
+    })
+
+    nextBtn.addEventListener('click', () => {
+        hotContainer.scrollLeft += 250;
+    })
+})
+
+//Add to cart
+const counterBox = document.querySelectorAll('.counter-box');
+
+counterBox.forEach(box => {
+    const decreaseBtn = box.querySelector('.decreaseBtn');
+    const increaseBtn = box.querySelector('.increaseBtn');
+    const quantity = box.querySelector('.Quantity');
+
+    let itemCount = quantity.textContent;
+
+    decreaseBtn.addEventListener('click', () => {
+        itemCount--;
+    
+        if (itemCount < 1) {
+            itemCount = 1;
+        }
+        quantity.textContent = itemCount;
+    })
+
+    increaseBtn.addEventListener('click', () => {
+        itemCount++;
+        quantity.textContent = itemCount;
+    })
+})
 
 //Change image when hover the image
 function changeMainImage(img) {
@@ -105,32 +137,6 @@ function changeImage(newImageUrl) {
     let mainImage = document.getElementById('mainImage');
     mainImage.src = newImageUrl;
 }
-
-//Add quantity
-const addQuantity = () => {
-    const quantity = document.getElementById("Quantity");
-    const number = parseInt(quantity.textContent);
-
-    if (quantity.textContent < 10) {
-        quantity.textContent = number + 1;
-    }
-    else {
-        quantity.textContent = 10;
-    }
-}
-
-//Remove quantity
-const remove = () => {
-    const quantity = document.getElementById("Quantity");
-    const number = parseInt(quantity.textContent);
-
-    if (quantity.textContent <= 1) {
-        quantity.textContent = 1;
-    }
-    else {
-        quantity.textContent--;
-    }
-} 
 
 //Payment form popup
 function paymentPopUp() {
